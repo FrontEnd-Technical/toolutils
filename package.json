@@ -7,7 +7,8 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "dev_ip": "nuxi dev --host 192.168.111.65 --port 3000"
   },
   "dependencies": {
     "@iconify/vue": "^5.0.0",

@@ -1,1 +1,267 @@
-export { default } from "file:///G:/99.Github/toolutils/node_modules/@nuxt/vite-builder/dist/runtime/client.manifest.mjs"
+export default {
+  "_CNtiwIva.js": {
+    "resourceType": "script",
+    "module": true,
+    "prefetch": true,
+    "preload": true,
+    "file": "CNtiwIva.js",
+    "name": "v3",
+    "imports": [
+      "node_modules/nuxt/dist/app/entry.js"
+    ]
+  },
+  "_VBtn.Bv7XKuX2.css": {
+    "resourceType": "style",
+    "prefetch": true,
+    "preload": true,
+    "file": "VBtn.Bv7XKuX2.css",
+    "src": "_VBtn.Bv7XKuX2.css"
+  },
+  "_wnjsxZvh.js": {
+    "resourceType": "script",
+    "module": true,
+    "prefetch": true,
+    "preload": true,
+    "file": "wnjsxZvh.js",
+    "name": "VBtn",
+    "imports": [
+      "node_modules/nuxt/dist/app/entry.js"
+    ],
+    "css": [
+      "VBtn.Bv7XKuX2.css"
+    ]
+  },
+  "VBtn.Bv7XKuX2.css": {
+    "file": "VBtn.Bv7XKuX2.css",
+    "resourceType": "style",
+    "prefetch": true,
+    "preload": true
+  },
+  "layouts/default.vue": {
+    "resourceType": "script",
+    "module": true,
+    "prefetch": true,
+    "preload": true,
+    "file": "Bj7IqSZc.js",
+    "name": "default",
+    "src": "layouts/default.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "node_modules/nuxt/dist/app/entry.js"
+    ],
+    "css": [
+      "default.DPxMyNRZ.css"
+    ]
+  },
+  "default.DPxMyNRZ.css": {
+    "file": "default.DPxMyNRZ.css",
+    "resourceType": "style",
+    "prefetch": true,
+    "preload": true
+  },
+  "middleware/redirect-home.ts": {
+    "resourceType": "script",
+    "module": true,
+    "prefetch": true,
+    "preload": true,
+    "file": "C5f9qv0X.js",
+    "name": "redirect-home",
+    "src": "middleware/redirect-home.ts",
+    "isDynamicEntry": true,
+    "imports": [
+      "node_modules/nuxt/dist/app/entry.js"
+    ]
+  },
+  "node_modules/@mdi/font/fonts/materialdesignicons-webfont.eot": {
+    "resourceType": "font",
+    "mimeType": "font/eot",
+    "file": "materialdesignicons-webfont.CSr8KVlo.eot",
+    "src": "node_modules/@mdi/font/fonts/materialdesignicons-webfont.eot"
+  },
+  "node_modules/@mdi/font/fonts/materialdesignicons-webfont.ttf": {
+    "resourceType": "font",
+    "mimeType": "font/ttf",
+    "file": "materialdesignicons-webfont.B7mPwVP_.ttf",
+    "src": "node_modules/@mdi/font/fonts/materialdesignicons-webfont.ttf"
+  },
+  "node_modules/@mdi/font/fonts/materialdesignicons-webfont.woff": {
+    "resourceType": "font",
+    "mimeType": "font/woff",
+    "file": "materialdesignicons-webfont.PXm3-2wK.woff",
+    "src": "node_modules/@mdi/font/fonts/materialdesignicons-webfont.woff"
+  },
+  "node_modules/@mdi/font/fonts/materialdesignicons-webfont.woff2": {
+    "resourceType": "font",
+    "mimeType": "font/woff2",
+    "file": "materialdesignicons-webfont.Dp5v-WZN.woff2",
+    "src": "node_modules/@mdi/font/fonts/materialdesignicons-webfont.woff2"
+  },
+  "node_modules/nuxt/dist/app/components/error-404.vue": {
+    "resourceType": "script",
+    "module": true,
+    "prefetch": true,
+    "preload": true,
+    "file": "BB_RkTq_.js",
+    "name": "error-404",
+    "src": "node_modules/nuxt/dist/app/components/error-404.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "node_modules/nuxt/dist/app/entry.js",
+      "_CNtiwIva.js"
+    ],
+    "css": []
+  },
+  "error-404.4oxyXxx0.css": {
+    "file": "error-404.4oxyXxx0.css",
+    "resourceType": "style",
+    "prefetch": true,
+    "preload": true
+  },
+  "node_modules/nuxt/dist/app/components/error-500.vue": {
+    "resourceType": "script",
+    "module": true,
+    "prefetch": true,
+    "preload": true,
+    "file": "AyQO3ZTC.js",
+    "name": "error-500",
+    "src": "node_modules/nuxt/dist/app/components/error-500.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "node_modules/nuxt/dist/app/entry.js",
+      "_CNtiwIva.js"
+    ],
+    "css": []
+  },
+  "error-500.CZqNkBuR.css": {
+    "file": "error-500.CZqNkBuR.css",
+    "resourceType": "style",
+    "prefetch": true,
+    "preload": true
+  },
+  "node_modules/nuxt/dist/app/entry.js": {
+    "resourceType": "script",
+    "module": true,
+    "prefetch": true,
+    "preload": true,
+    "file": "Bxv2gv8k.js",
+    "name": "entry",
+    "src": "node_modules/nuxt/dist/app/entry.js",
+    "isEntry": true,
+    "dynamicImports": [
+      "middleware/redirect-home.ts",
+      "layouts/default.vue",
+      "node_modules/nuxt/dist/app/components/error-404.vue",
+      "node_modules/nuxt/dist/app/components/error-500.vue"
+    ],
+    "css": [
+      "entry.DjaJII7C.css"
+    ],
+    "assets": [
+      "materialdesignicons-webfont.CSr8KVlo.eot",
+      "materialdesignicons-webfont.Dp5v-WZN.woff2",
+      "materialdesignicons-webfont.PXm3-2wK.woff",
+      "materialdesignicons-webfont.B7mPwVP_.ttf"
+    ],
+    "_globalCSS": true
+  },
+  "entry.DjaJII7C.css": {
+    "file": "entry.DjaJII7C.css",
+    "resourceType": "style",
+    "prefetch": true,
+    "preload": true
+  },
+  "materialdesignicons-webfont.CSr8KVlo.eot": {
+    "file": "materialdesignicons-webfont.CSr8KVlo.eot",
+    "resourceType": "font",
+    "mimeType": "font/eot"
+  },
+  "materialdesignicons-webfont.Dp5v-WZN.woff2": {
+    "file": "materialdesignicons-webfont.Dp5v-WZN.woff2",
+    "resourceType": "font",
+    "mimeType": "font/woff2"
+  },
+  "materialdesignicons-webfont.PXm3-2wK.woff": {
+    "file": "materialdesignicons-webfont.PXm3-2wK.woff",
+    "resourceType": "font",
+    "mimeType": "font/woff"
+  },
+  "materialdesignicons-webfont.B7mPwVP_.ttf": {
+    "file": "materialdesignicons-webfont.B7mPwVP_.ttf",
+    "resourceType": "font",
+    "mimeType": "font/ttf"
+  },
+  "pages/base64-formatter/index.vue": {
+    "resourceType": "script",
+    "module": true,
+    "prefetch": true,
+    "preload": true,
+    "file": "Bz_95kQ-.js",
+    "name": "index",
+    "src": "pages/base64-formatter/index.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "node_modules/nuxt/dist/app/entry.js"
+    ]
+  },
+  "pages/getting-started/introduction.vue": {
+    "resourceType": "script",
+    "module": true,
+    "prefetch": true,
+    "preload": true,
+    "file": "CLPAciEC.js",
+    "name": "introduction",
+    "src": "pages/getting-started/introduction.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "node_modules/nuxt/dist/app/entry.js",
+      "_wnjsxZvh.js"
+    ]
+  },
+  "pages/index.vue": {
+    "resourceType": "script",
+    "module": true,
+    "prefetch": true,
+    "preload": true,
+    "file": "DavO0Lgp.js",
+    "name": "index",
+    "src": "pages/index.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "node_modules/nuxt/dist/app/entry.js"
+    ]
+  },
+  "pages/json-formatter/index.vue": {
+    "resourceType": "script",
+    "module": true,
+    "prefetch": true,
+    "preload": true,
+    "file": "3sBborHO.js",
+    "name": "index",
+    "src": "pages/json-formatter/index.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "node_modules/nuxt/dist/app/entry.js"
+    ]
+  },
+  "pages/text-formatter/index.vue": {
+    "resourceType": "script",
+    "module": true,
+    "prefetch": true,
+    "preload": true,
+    "file": "BjbuPwqn.js",
+    "name": "index",
+    "src": "pages/text-formatter/index.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "node_modules/nuxt/dist/app/entry.js",
+      "_wnjsxZvh.js"
+    ],
+    "css": []
+  },
+  "index.D0wSNJfb.css": {
+    "file": "index.D0wSNJfb.css",
+    "resourceType": "style",
+    "prefetch": true,
+    "preload": true
+  }
+}

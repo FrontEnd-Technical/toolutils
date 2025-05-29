@@ -1,12 +1,9 @@
-<script lang="ts">
-import { MainNavLeftDashedLine, MainNavLeftSectionalInfo } from "#components";
+<script setup lang="ts">
 </script>
 
 <template>
   <aside class="hidden overflow-y-auto py-8 screen-media-large">
     <div class="relative">
-      <MainNavLeftGeneralInfo />
-      <MainNavLeftDashedLine />
       <MainNavLeftSectionalInfo />
     </div>
   </aside>

@@ -1,69 +1,57 @@
 <script setup lang="ts">
 import { Icon } from "@iconify/vue";
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
 
 const navItems = reactive([
-  {
-    title: "Introduction",
-    iconClass: "mdi:information-slab-circle-outline",
-    path: "#",
-    focus: true,
-  },
-  {
-    title: "Installation",
-    iconClass: "mdi:play-outline",
-    path: "#",
-    focus: false,
-  },
-  {
-    title: "Configuration",
-    iconClass: "mdi:cog-transfer-outline",
-    path: "#",
-    focus: false,
-  },
-  {
-    title: "Views",
-    iconClass: "mdi:code-block-braces",
-    path: "#",
-    focus: false,
-  },
-  {
-    title: "Assets",
-    iconClass: "mdi:image-outline",
-    path: "#",
-    focus: false,
-  },
     {
-    title: "Styling",
-    iconClass: "mdi:package-variant-closed",
-    path: "#",
-    focus: false,
-  },
+        title: "Text Formater",
+        iconClass: "mdi:information-slab-circle-outline",
+        path: "/text-formatter",
+        focus: true,
+    },
+    {
+        title: "Json Formater",
+        iconClass: "mdi:play-outline",
+        path: "/json-formatter",
+        focus: false,
+    },
+    {
+        title: "Base64 Formatter",
+        iconClass: "mdi:cog-transfer-outline",
+        path: "/base64-formatter",
+        focus: false,
+    }
 ]);
+
+function handleNav(item: any) {
+    navItems.map(item => {
+        item.focus = false;
+    });
+
+    if (item.path && item.path !== '#') {
+        item.focus = true;
+        router.push(item.path);
+    }
+}
 </script>
 
 <template>
-  <nav>
-    <ul class="isolate -mx-2.5 -mt-1.5">
-      <li v-for="(item, index) in navItems" :key="index">
-        <a
-          :href="item.path"
-          class="icon-group flex items-center gap-1.5 py-1 text-sm"
-          :class="
-            item.focus
-              ? 'text-primary'
-              : 'text-muted hover:text-default transition-colors'
-          "
-        >
-          <div class="flex items-center px-2.5 py-0.5 text-sm pr-0.5"
-          >
-            <Icon :icon="item.iconClass" class="size-5 shrink-0" />
-          </div>
-          <span class="title-truncate">
-            {{ item.title }}
-          </span>
-        </a>
-      </li>
-    </ul>
-  </nav>
+    <nav>
+        <ul class="isolate -mx-2.5 -mt-1.5">
+            <li v-for="(item, index) in navItems" :key="index">
+                <button type="button" class="icon-group flex items-center gap-1.5 py-1 text-sm w-full text-left" :class="item.focus
+                    ? 'text-primary'
+                    : 'text-muted hover:text-default transition-colors'" @click="handleNav(item)">
+                    <div class="flex items-center px-2.5 py-0.5 text-sm pr-0.5">
+                        <Icon :icon="item.iconClass" class="size-5 shrink-0" />
+                    </div>
+                    <span class="title-truncate">
+                        {{ item.title }}
+                    </span>
+                </button>
+            </li>
+        </ul>
+    </nav>
 </template>
-<style scoped></style>

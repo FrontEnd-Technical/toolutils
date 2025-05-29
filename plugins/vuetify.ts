@@ -30,13 +30,13 @@ export default defineNuxtPlugin((app) => {
         elevation: 1,
       },
     },
-    icons: {
-      defaultSet: "mdi",
-      aliases,
-      sets: {
-        mdi,
-      },
-    },
+    // icons: {
+    //   defaultSet: "mdi",
+    //   aliases,
+    //   sets: {
+    //     mdi,
+    //   },
+    // },
   });
   app.vueApp.use(vuetify);
 });

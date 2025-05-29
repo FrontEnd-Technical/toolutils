@@ -23,3 +23,6 @@
 hs_err_pid*
 replay_pid*
 node_modules
+0.0.0.0
+192.168.111.65
+.output
