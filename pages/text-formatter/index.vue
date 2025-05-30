@@ -1,8 +1,6 @@
 <script setup lang='ts'>
 const textRoot = ref<string>('');
 const textResult = ref<string>('');
-const isCopied = ref(false);
-let copyTimeout: ReturnType<typeof setTimeout> | null = null;
 
 const clearData = () => {
     textRoot.value = '';
@@ -20,42 +18,35 @@ const removeLineEmpty = () => {
 }
 
 const handleUperCaseText = () => {
-    const text = textRoot.value.trim();
+    const text = trimMultiline(textRoot.value);
     textResult.value = text.toUpperCase();
 };
 
 const handleLowCaseText = () => {
-    const text = textRoot.value.trim();
+    const text = trimMultiline(textRoot.value);
     textResult.value = text.toLowerCase();
 };
 
-const _toSentenceCase = (text) => {
+const _toSentenceCase = (text: string) => {
     if (!text) return '';
     return text.charAt(0).toUpperCase() + text.slice(1).toLowerCase();
 }
 
 const handleSentenceCase = () => {
-    const text = textRoot.value.trim();
+    const text = trimMultiline(textRoot.value);
     textResult.value = text
         .split(/([.?!]\s*)/)
         .map((part, i) => (i % 2 === 0 ? _toSentenceCase(part.trim()) : part))
         .join('');
 }
 
-const handleCopyText = async () => {
-    if (textResult.value) {
-        try {
-            await navigator.clipboard.writeText(textResult.value);
-            isCopied.value = true;
-            if (copyTimeout) clearTimeout(copyTimeout);
-            copyTimeout = setTimeout(() => {
-                isCopied.value = false;
-            }, 1000);
-        } catch (e) {
-            alert('Không thể copy vào clipboard!');
-        }
-    }
-};
+const handleCapitalizedCase = () => {
+    const text = trimMultiline(textRoot.value);
+    textResult.value = text
+        .split(' ')
+        .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+        .join(' ');
+}
 
 const insertTab = (event: KeyboardEvent, modelName: string) => {
     const target = event.target as HTMLTextAreaElement;
@@ -100,6 +91,9 @@ const insertTab = (event: KeyboardEvent, modelName: string) => {
                     <v-btn flat @click="handleSentenceCase">
                         <span class="text-ellipsis normal-case">Sentence case</span>
                     </v-btn>
+                    <v-btn flat @click="handleCapitalizedCase">
+                        <span class="text-ellipsis normal-case">Capitalized Case</span>
+                    </v-btn>
                     <v-btn flat @click="trimText">
                         <span class="text-ellipsis normal-case">Trim</span>
                     </v-btn>
@@ -113,14 +107,7 @@ const insertTab = (event: KeyboardEvent, modelName: string) => {
             </div>
             <div id="#automation-and-conventions" class="section">
                 <h1 class="text-xl font-bold text-pretty pb-2">Text kết quả</h1>
-                <v-textarea variant="outlined" v-model="textResult" rows="10" readonly>
-                    <template #append-inner>
-                        <v-icon class="cursor-pointer" tabindex="-1" @mousedown.prevent.stop="handleCopyText"
-                            title="Copy">
-                            {{ isCopied ? 'mdi-check-circle-outline' : 'mdi-content-copy' }}
-                        </v-icon>
-                    </template>
-                </v-textarea>
+                <CommonCopyableTextarea v-model="textResult" />
             </div>
         </div>
     </div>

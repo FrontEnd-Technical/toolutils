@@ -107,3 +107,12 @@ body {
 .border-default {
   border-color: var(--ui-border);
 }
+
+.my-json-pretty .vjs-tree-node:hover,
+.my-json-pretty .vjs-tree-node:focus {
+    background-color: #272829;
+    backdrop-filter: blur(1px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.7);
+    outline: none;
+    cursor: pointer;
+}

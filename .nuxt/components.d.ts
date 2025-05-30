@@ -12,7 +12,11 @@ type HydrationStrategies = {
 }
 type LazyComponent<T> = (T & DefineComponent<HydrationStrategies, {}, {}, {}, {}, {}, {}, { hydrated: () => void }>)
 interface _GlobalComponents {
-      'HeaderLogo': typeof import("../components/header/Logo.vue")['default']
+      'UIBtnCopy': typeof import("../components/UI/btn-copy.vue")['default']
+    'UILineTextarea': typeof import("../components/UI/line-textarea.vue")['default']
+    'CommonCopyableTextarea': typeof import("../components/common/CopyableTextarea.vue")['default']
+    'CommonJsonViewer': typeof import("../components/common/JsonViewer.vue")['default']
+    'HeaderLogo': typeof import("../components/header/Logo.vue")['default']
     'HeaderVersion': typeof import("../components/header/Version.vue")['default']
     'Header': typeof import("../components/header/index.vue")['default']
     'Main': typeof import("../components/main/index.vue")['default']
@@ -44,7 +48,11 @@ interface _GlobalComponents {
     'Body': typeof import("../node_modules/nuxt/dist/head/runtime/components")['Body']
     'NuxtIsland': typeof import("../node_modules/nuxt/dist/app/components/nuxt-island")['default']
     'NuxtRouteAnnouncer': IslandComponent<typeof import("../node_modules/nuxt/dist/app/components/server-placeholder")['default']>
-      'LazyHeaderLogo': LazyComponent<typeof import("../components/header/Logo.vue")['default']>
+      'LazyUIBtnCopy': LazyComponent<typeof import("../components/UI/btn-copy.vue")['default']>
+    'LazyUILineTextarea': LazyComponent<typeof import("../components/UI/line-textarea.vue")['default']>
+    'LazyCommonCopyableTextarea': LazyComponent<typeof import("../components/common/CopyableTextarea.vue")['default']>
+    'LazyCommonJsonViewer': LazyComponent<typeof import("../components/common/JsonViewer.vue")['default']>
+    'LazyHeaderLogo': LazyComponent<typeof import("../components/header/Logo.vue")['default']>
     'LazyHeaderVersion': LazyComponent<typeof import("../components/header/Version.vue")['default']>
     'LazyHeader': LazyComponent<typeof import("../components/header/index.vue")['default']>
     'LazyMain': LazyComponent<typeof import("../components/main/index.vue")['default']>
@@ -82,6 +90,10 @@ declare module 'vue' {
   export interface GlobalComponents extends _GlobalComponents { }
 }
 
+export const UIBtnCopy: typeof import("../components/UI/btn-copy.vue")['default']
+export const UILineTextarea: typeof import("../components/UI/line-textarea.vue")['default']
+export const CommonCopyableTextarea: typeof import("../components/common/CopyableTextarea.vue")['default']
+export const CommonJsonViewer: typeof import("../components/common/JsonViewer.vue")['default']
 export const HeaderLogo: typeof import("../components/header/Logo.vue")['default']
 export const HeaderVersion: typeof import("../components/header/Version.vue")['default']
 export const Header: typeof import("../components/header/index.vue")['default']
@@ -114,6 +126,10 @@ export const Html: typeof import("../node_modules/nuxt/dist/head/runtime/compone
 export const Body: typeof import("../node_modules/nuxt/dist/head/runtime/components")['Body']
 export const NuxtIsland: typeof import("../node_modules/nuxt/dist/app/components/nuxt-island")['default']
 export const NuxtRouteAnnouncer: IslandComponent<typeof import("../node_modules/nuxt/dist/app/components/server-placeholder")['default']>
+export const LazyUIBtnCopy: LazyComponent<typeof import("../components/UI/btn-copy.vue")['default']>
+export const LazyUILineTextarea: LazyComponent<typeof import("../components/UI/line-textarea.vue")['default']>
+export const LazyCommonCopyableTextarea: LazyComponent<typeof import("../components/common/CopyableTextarea.vue")['default']>
+export const LazyCommonJsonViewer: LazyComponent<typeof import("../components/common/JsonViewer.vue")['default']>
 export const LazyHeaderLogo: LazyComponent<typeof import("../components/header/Logo.vue")['default']>
 export const LazyHeaderVersion: LazyComponent<typeof import("../components/header/Version.vue")['default']>
 export const LazyHeader: LazyComponent<typeof import("../components/header/index.vue")['default']>
