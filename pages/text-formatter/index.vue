@@ -18,12 +18,12 @@ const removeLineEmpty = () => {
 }
 
 const handleUperCaseText = () => {
-    const text = trimMultiline(textRoot.value);
+    const text = textRoot.value.trim();
     textResult.value = text.toUpperCase();
 };
 
 const handleLowCaseText = () => {
-    const text = trimMultiline(textRoot.value);
+    const text = textRoot.value.trim();
     textResult.value = text.toLowerCase();
 };
 
