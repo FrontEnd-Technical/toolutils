@@ -4,6 +4,7 @@ import { ref } from 'vue';
 const props = defineProps<{
     modelValue: string;
     rows?: string;
+    label?: string;
 }>();
 
 const emit = defineEmits<{
@@ -30,7 +31,7 @@ const handleCopyText = async () => {
 </script>
 
 <template>
-    <v-textarea variant="outlined" :model-value="modelValue" :rows="rows ?? '10'" readonly>
+    <v-textarea variant="outlined" :model-value="modelValue" :rows="rows ?? '10'" :label="label" readonly>
         <template #append-inner>
             <v-icon class="cursor-pointer" tabindex="-1" @mousedown.prevent.stop="handleCopyText" title="Copy">
                 {{ isCopied ? 'mdi-check-circle-outline' : 'mdi-content-copy' }}

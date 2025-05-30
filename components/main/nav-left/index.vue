@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <aside class="hidden overflow-y-auto py-8 screen-media-large">
+  <aside class="hidden overflow-y-auto py-4 screen-media-large">
     <div class="relative">
       <MainNavLeftSectionalInfo />
     </div>

@@ -1,0 +1,18 @@
+:root {
+    --font-sans: "Public Sans", sans-serif;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --ui-primary: #00dc82;
+    --default-font-family: var(--font-sans);
+    --default-mono-font-family: var(--font-mono);
+    --btn-color: #328E6E;
+    /* Using in Header.vue */
+    --ui-header-height: 4rem;
+    --ui-bg: oklch(12.9% .042 264.695);
+    --ui-border: oklch(27.9% 0.041 260.031);
+    --ui-container: 90rem;
+    --ui-text: oklch(92.9% 0.013 255.508);
+    --ui-text-muted: var(--color-slate-400, oklch(70.4% 0.04 256.788));
+    --ui-text-inverted: oklch(20.8% 0.042 265.755);
+    --ui-text-dimmed: oklch(55.4% 0.046 257.417);
+
+}

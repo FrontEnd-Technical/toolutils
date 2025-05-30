@@ -6,7 +6,11 @@ export default defineNuxtConfig({
   },
   compatibilityDate: "2024-11-01",
   devtools: { enabled: true },
-  css: ["~/assets/css/main.css", "vue-json-pretty/lib/styles.css"],
+  css: [
+    "@/assets/styles/variables.css",
+    "~/assets/css/main.css",
+    "vue-json-pretty/lib/styles.css",
+  ],
   plugins: ["@/plugins/vue-json-pretty"],
   modules: [
     "@nuxtjs/tailwindcss",
@@ -18,4 +22,9 @@ export default defineNuxtConfig({
       });
     },
   ],
+  vite: {
+    optimizeDeps: {
+      include: ["encoding-japanese"],
+    },
+  },
 });

@@ -3,23 +3,24 @@ import { Icon } from "@iconify/vue";
 import { useRouter } from 'vue-router';
 
 const router = useRouter();
+const route = useRoute();
 
 const navItems = reactive([
     {
         title: "Text Formater",
-        iconClass: "mdi:information-slab-circle-outline",
+        iconClass: "mdi:text-box-check-outline",
         path: "/text-formatter",
         focus: true,
     },
     {
         title: "Json Formater",
-        iconClass: "mdi:play-outline",
+        iconClass: "mdi:code-json",
         path: "/json-formatter",
         focus: false,
     },
     {
         title: "Base64 Formatter",
-        iconClass: "mdi:cog-transfer-outline",
+        iconClass: "mdi:file-code-outline",
         path: "/base64-formatter",
         focus: false,
     }
@@ -35,6 +36,15 @@ function handleNav(item: any) {
         router.push(item.path);
     }
 }
+
+function updateFocusByRoute() {
+    navItems.forEach(item => {
+        item.focus = (item.path === route.path);
+    });
+}
+
+onMounted(updateFocusByRoute);
+watch(() => route.path, updateFocusByRoute);
 </script>
 
 <template>
