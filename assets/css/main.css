@@ -96,3 +96,7 @@ body {
     outline: none;
     cursor: pointer;
 }
+
+.border-r-vetical {
+    border-right: 1px solid var(--ui-border);
+}

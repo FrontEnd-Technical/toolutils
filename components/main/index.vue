@@ -5,9 +5,9 @@
 <template>
     <main class="min-height relative">
         <div class="w-full max-width mx-auto">
-            <div class="flex flex-col lg:grid lg:grid-cols-10 lg:gap-10">
-                <MainNavLeft class="lg:col-span-2" />
-                <div class="lg:col-span-8">
+            <div class="flex flex-col lg:grid lg:grid-cols-11 lg:gap-10">
+                <MainNavLeft class="lg:col-span-2 border-r-vetical min-h-[93vh]" />
+                <div class="lg:col-span-9">
                     <div class="flex flex-col lg:grid lg:grid-cols-10 lg:gap-10">
                         <slot></slot>
                     </div>

@@ -24,6 +24,7 @@ interface _GlobalComponents {
     'MainNavLeftGeneralInfo': typeof import("../components/main/nav-left/general-info.vue")['default']
     'MainNavLeft': typeof import("../components/main/nav-left/index.vue")['default']
     'MainNavLeftSectionalInfo': typeof import("../components/main/nav-left/sectional-info.vue")['default']
+    'MainTitlePage': typeof import("../components/main/title-page.vue")['default']
     'NuxtWelcome': typeof import("../node_modules/nuxt/dist/app/components/welcome.vue")['default']
     'NuxtLayout': typeof import("../node_modules/nuxt/dist/app/components/nuxt-layout")['default']
     'NuxtErrorBoundary': typeof import("../node_modules/nuxt/dist/app/components/nuxt-error-boundary.vue")['default']
@@ -60,6 +61,7 @@ interface _GlobalComponents {
     'LazyMainNavLeftGeneralInfo': LazyComponent<typeof import("../components/main/nav-left/general-info.vue")['default']>
     'LazyMainNavLeft': LazyComponent<typeof import("../components/main/nav-left/index.vue")['default']>
     'LazyMainNavLeftSectionalInfo': LazyComponent<typeof import("../components/main/nav-left/sectional-info.vue")['default']>
+    'LazyMainTitlePage': LazyComponent<typeof import("../components/main/title-page.vue")['default']>
     'LazyNuxtWelcome': LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/welcome.vue")['default']>
     'LazyNuxtLayout': LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/nuxt-layout")['default']>
     'LazyNuxtErrorBoundary': LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/nuxt-error-boundary.vue")['default']>
@@ -102,6 +104,7 @@ export const MainNavLeftDashedLine: typeof import("../components/main/nav-left/d
 export const MainNavLeftGeneralInfo: typeof import("../components/main/nav-left/general-info.vue")['default']
 export const MainNavLeft: typeof import("../components/main/nav-left/index.vue")['default']
 export const MainNavLeftSectionalInfo: typeof import("../components/main/nav-left/sectional-info.vue")['default']
+export const MainTitlePage: typeof import("../components/main/title-page.vue")['default']
 export const NuxtWelcome: typeof import("../node_modules/nuxt/dist/app/components/welcome.vue")['default']
 export const NuxtLayout: typeof import("../node_modules/nuxt/dist/app/components/nuxt-layout")['default']
 export const NuxtErrorBoundary: typeof import("../node_modules/nuxt/dist/app/components/nuxt-error-boundary.vue")['default']
@@ -138,6 +141,7 @@ export const LazyMainNavLeftDashedLine: LazyComponent<typeof import("../componen
 export const LazyMainNavLeftGeneralInfo: LazyComponent<typeof import("../components/main/nav-left/general-info.vue")['default']>
 export const LazyMainNavLeft: LazyComponent<typeof import("../components/main/nav-left/index.vue")['default']>
 export const LazyMainNavLeftSectionalInfo: LazyComponent<typeof import("../components/main/nav-left/sectional-info.vue")['default']>
+export const LazyMainTitlePage: LazyComponent<typeof import("../components/main/title-page.vue")['default']>
 export const LazyNuxtWelcome: LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/welcome.vue")['default']>
 export const LazyNuxtLayout: LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/nuxt-layout")['default']>
 export const LazyNuxtErrorBoundary: LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/nuxt-error-boundary.vue")['default']>
