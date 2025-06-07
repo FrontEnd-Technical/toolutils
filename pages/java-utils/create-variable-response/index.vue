@@ -5,11 +5,12 @@ const header_page = {
 }
 
 const typeMap: Record<string, string> = {
-        '配列': 'List<T>',
-        '日付': 'LocalDate',
-        '整数': 'Integer',
-        '文字列': 'String'
-    };
+    'オブジェクト': 'Object',
+    '配列': 'List<T>',
+    '日付': 'LocalDate',
+    '整数': 'Integer',
+    '文字列': 'String'
+};
 
 const fields = reactive({
     name: '',
@@ -32,8 +33,9 @@ const convertVariables = () => {
     const results = names.map((name, index) => {
         const camelName = _toCamelCase(name);
         return `/*
-                * ${comments[index]}
-                */
+                 * ${comments[index]}
+                 */
+                @JsonProperty("${name}")
                 private ${typesConverted[index]} ${camelName};\n`;
     });
 

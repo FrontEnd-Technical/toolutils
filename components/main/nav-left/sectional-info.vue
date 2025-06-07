@@ -35,6 +35,11 @@ const navItems = reactive([
                 title: "Create Variable",
                 path: "/java-utils/create-variable",
                 focus: false,
+            },
+            {
+                title: "Create Variable Response",
+                path: "/java-utils/create-variable-response",
+                focus: false,
             }
         ]
     }

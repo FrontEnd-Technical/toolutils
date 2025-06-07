@@ -12,6 +12,11 @@ const action_list = [
         icon: 'mdi-gesture-tap-button',
         title: 'Create variable',
         path: '/java-utils/create-variable'
+    },
+    {
+        icon: 'mdi-gesture-tap-button',
+        title: 'Create variable response',
+        path: '/java-utils/create-variable-response'
     }
 ]
 
@@ -30,7 +35,6 @@ function handleActionClick(action: any) {
                 <v-list-item
                     v-for="action in action_list"
                     :key="action.title"
-                    :subtitle="action.subtitle"
                     :title="action.title"
                     @click="handleActionClick(action)"
                     class="cursor-pointer"
